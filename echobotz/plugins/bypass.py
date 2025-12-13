@@ -28,6 +28,7 @@ def _sexy(name):
         "extraflix": "ExtraFlix",
         "extralink": "ExtraLink",
         "luxdrive": "LuxDrive",
+        "nexdrive": "NexDrive",
     }
     return mapping.get(name, name.title())
 
