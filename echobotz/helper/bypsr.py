@@ -32,6 +32,8 @@ _BYPASS_CMD_TO_SERVICE = {
     "luxdrive": "luxdrive",
     "nexdrive": "nexdrive",
     "nd": "nexdrive",
+    "hblinks": "hblinks",
+    "hbl": "hblinks",
 }
 
 _BYPASS_ENDPOINTS = {
@@ -52,6 +54,7 @@ _BYPASS_ENDPOINTS = {
     "extralink": "https://pbx1botapi.vercel.app/api/extralink?url=",
     "luxdrive": "https://pbx1botapi.vercel.app/api/luxdrive?url=",
     "nexdrive": "https://pbx1botsapi2.vercel.app/api/nexdrive?url=",
+    "hblinks": "https://pbx1botsapi2.vercel.app/api/hblinks?url=",
 }
 
 def _bp_srv(cmd):
