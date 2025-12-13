@@ -28,7 +28,7 @@ async def send_message(message, text, buttons=None, block=True, photo=None, **kw
         if photo:
             try:
                 if isinstance(message, int):
-                    return await EchoBot.send_photo(
+                    return await EchoBot.bot.send_photo(
                         chat_id=message,
                         photo=photo,
                         caption=text,
@@ -67,7 +67,7 @@ async def send_message(message, text, buttons=None, block=True, photo=None, **kw
                 return
 
         if isinstance(message, int):
-            return await EchoBot.send_message(
+            return await EchoBot.bot.send_message(
                 chat_id=message,
                 text=text,
                 disable_web_page_preview=disable_web_page_preview,
@@ -100,6 +100,7 @@ async def send_message(message, text, buttons=None, block=True, photo=None, **kw
         LOGGER.error(str(e), exc_info=True)
         return str(e)
 
+
 async def edit_message(message, text, buttons=None, block=True, **kwargs):
     try:
         disable_web_page_preview = kwargs.pop("disable_web_page_preview", True)
@@ -123,7 +124,8 @@ async def edit_message(message, text, buttons=None, block=True, **kwargs):
     except Exception as e:
         LOGGER.error(str(e), exc_info=True)
         return str(e)
-        
+
+
 async def edit_reply_markup(message, buttons):
     try:
         return await message.edit_reply_markup(reply_markup=buttons)
@@ -141,7 +143,7 @@ async def edit_reply_markup(message, buttons):
 async def send_file(message, file, caption="", buttons=None, **kwargs):
     try:
         if isinstance(message, int):
-            return await EchoBot.send_document(
+            return await EchoBot.bot.send_document(
                 chat_id=message,
                 document=file,
                 caption=caption,
