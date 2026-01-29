@@ -110,7 +110,7 @@ class Config:
 <b>✺ Original URL:</b>
 <code>{original_url}</code>
 
-<blockquote>Bot By ➤ @NxTalks</blockquote>
+<blockquote>Bot By ➤ @Ayu_bots</blockquote>
 """.strip()
 
     POSER_TEMPLATE = """
@@ -128,5 +128,5 @@ class Config:
 {posters}
 </blockquote>
 
-<blockquote>Bot By ➤ @NxTalks</blockquote>
+<blockquote>Bot By ➤ @Ayu_bots</blockquote>
 """.strip()
